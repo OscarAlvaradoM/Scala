@@ -2,7 +2,7 @@
       // ############################## eje 1 ################
         // codigo postal
          println("Gerardo Brito \n" +
-           "Codigo postal: 57000")
+           "Codigo postal: 57000") 
 
       // ############################## eje 11 ################                                  
                      //galones/millas a litros/kilometros
