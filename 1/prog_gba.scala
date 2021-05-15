@@ -1,11 +1,16 @@
 
-      // ############################## eje 1 ################
+                                                      // ############################## eje 1 ################
+
         // codigo postal
          println("Gerardo Brito \n" +
            "Codigo postal: 57000") 
 
-      // ############################## eje 11 ################                                  
-                     //galones/millas a litros/kilometros
+
+                                                // ############################## eje 11 ################   
+                                                             //galones/millas a litros/kilometros
+
+
+
     
       // 1 galon = 3.785 litros
       // 1 milla = 1.61 kilometros
@@ -21,7 +26,9 @@
       println("La conversion de GPM a Litros/km es: "+"%.2f".format( litros_km)+" litros/100 km")
       
 
-          // ############################## eje 21 ################
+
+
+                                                 // ############################## eje 21 ################
       //area de un triangulo
     println("Calulando el area de un triangulo:")
     println("Valor de la altura 'h':")
@@ -34,7 +41,9 @@
     println("El are del triangulo es: "+ area)
 
 
-// ############################## eje 31 ################
+
+                                                // ############################## eje 31 ################
+
 //convertir klpascales-varios
     println("Valor en klPascales: ")
     var klp = scanner.nextDouble()
@@ -48,7 +57,12 @@
     println("psi: "+ klp * psi)
     println("atm: "+ klp * atm)
 
-// ############################## eje 41 ################
+
+
+
+                                                // ############################## eje 41 ################
+
+
 //notas a frecuencia
     println("Ingresa 1 nota 'C-D-E-F-G-A-B': ")
     var a = scala.io.StdIn.readChar() //lee en formato scala
@@ -102,7 +116,14 @@
      }
     }
 
-// ############################## eje 51 ################}
+
+
+
+
+
+                                          // ############################## eje 51 ################}
+
+
   //Calificacion abcde
 println("Ingresa la letra de calificacion: ")
     val letra = scala.io.StdIn.readLine() // con el readLine se puede selecionar  "n" cracter
@@ -150,6 +171,46 @@ println("Ingresa la letra de calificacion: ")
 
 
 
+
+
+
+                                          // ############################## eje 61 ############################
+
+
+
+val arreglo = Array.ofDim[Int](80) //declara el areglo
+
+    val lmt : Int = 0 //deitien ingreso de datos
+    var valor : Int = 1 //para entrar al while
+    var indice : Int = 0  //ligar de los elementos en el areglo, y tambien nos da el numero de elemnteos del areglo
+
+
+    while (valor != lmt) {
+      println("Dame el valor: ")
+      valor = scanner.nextInt()
+      arreglo(indice) = valor
+      indice += 1
+    }
+
+          //imprime el arreglo con el for
+    val lmt2 = indice -2  // restamos dos por lo que se agrego en el while un 0 y otro por que comenzo en 0
+    for (j<- 0 to (lmt2)){
+        print(" "+ arreglo(j))
+      }
+
+         // sumamos los elemnetos del areglo
+    var suma : Double = 0  //
+    for (k <- 0 to (arreglo(lmt2))) {
+        suma += arreglo(k)
+    }
+
+        //sacamos promedio
+
+      indice -= 1 //le quitamos 1 por el conteo de 0
+      val prom = suma/indice
+    println("\n La suma es: "+suma+
+            "\n Elementos en el areglo: "+indice+
+            "\n El promedio de calificaciones es: "+ prom)
 
 
 
