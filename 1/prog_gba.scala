@@ -250,4 +250,31 @@ println("Raiz cuadrada por metodo de 'Newton', valor : ")
     }
 
     println("La raiz cuadrada de "+ radicando +" es: "+(cont-1))
+
+
         
+                                             // ############################## eje 81 ############################
+
+//Teoream de pitagoras
+println("Calculando Hiponusa de triangulo rectangulo con 'teorema de pitagoras'")
+    println("Medida del primer lado 'a': ")
+    val a = scanner.nextDouble()
+    println("Medida del segundo lado 'b': ")
+    val b = scanner.nextDouble()
+
+    val h :Double = math.pow(a,2) + math.pow(b,2)
+
+    println("Hipotenusa es c^2 = : "+h+" y obteniendo la raiz es  c = : "+ "%.4f".format(math.sqrt(h)))
+
+
+
+
+
+
+
+
+
+
+
+
+
