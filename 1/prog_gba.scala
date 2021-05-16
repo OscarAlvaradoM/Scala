@@ -213,6 +213,41 @@ val arreglo = Array.ofDim[Int](80) //declara el areglo
             "\n El promedio de calificaciones es: "+ prom)
 
 
+                                                 // ############################## eje 71 ############################
 
+println("Raiz cuadrada por metodo de 'Newton', valor : ")
+    var radicando = scanner.nextDouble()
 
+    var  cont : Int = 1
+    var cRaiz : Double = 1
+
+    while (cRaiz < radicando){
+      cRaiz = Math.pow(cont,2)
+      cRaiz = cRaiz
+      cont += +1
+      
+    }
+//si la raiz no es un entero entra al if y hace el calculo de los decimales
+    var cont2: Double = 0
+    if (cRaiz> radicando){
+      cont2 = cont -2
+
+      
+      var i : Int = 0
+      var cal: Double = 0
+      var cal2 : Double = 0
+     
+      while (i < 5){
+        cal = (radicando/cont2)
+        cal2 = ((cont2+cal)/2)
+        cont2 = cal2
+        i += +1
+
+      }
+      println("La raiz cuadrada de "+ radicando +" es: "+"%.12f".format(cal2))
+      System.exit(0)
+
+    }
+
+    println("La raiz cuadrada de "+ radicando +" es: "+(cont-1))
         
