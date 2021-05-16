@@ -267,10 +267,41 @@ println("Calculando Hiponusa de triangulo rectangulo con 'teorema de pitagoras'"
     println("Hipotenusa es c^2 = : "+h+" y obteniendo la raiz es  c = : "+ "%.4f".format(math.sqrt(h)))
 
 
+                                               // ############################## eje 91 ############################
+println("Formula: ")
+    val formu = scanner.nextLine()
+
+    var i: Int = 0
+    var a, b, c: Int = 0
+    val sum = '+'
+    val res = '-'
+    val mul = '*'
+    val div = '/'
+    val exp = '^'
+
+    while (i < formu.length) {
+
+      println(formu(i))
+      if (formu(i) == sum || (formu(i) == res)) {
+        a += +1 
+      } else if (formu(i) == mul || (formu(i) == div)) {
+        b += +1      
+      } else if (formu(i) == exp) {
+        c += +1
+      }
+      i += +1
+    }
+
+    if (a == 0 && b == 0 && c == 0) {
+      println("No hay operadores")
+    }
+
+    println("Hay: " + a + " ('+' '-') con valor: 1")
+    println("Hay: " + b + " ('*' '/') con valor: 2")
+    println("Hay: " + c + " ('^')     con valor: 3")
 
 
-
-
+                                         
 
 
 
