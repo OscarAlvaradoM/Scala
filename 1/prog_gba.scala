@@ -305,9 +305,86 @@ println("Formula: ")
     println("Hay: " + c + " ('^')     con valor: 3")
 
 
-                                         
+                                         // ############################## eje 101 ############################
+                                        //++++ Reduciendo un fraccion a la minima expresion con numeros primos
+
+ //println("Ingresa Numero:")
+   
+    var arreglo = Array.ofDim[Int](50) //declaramos el areglo con 50 espacios en memoria
+
+    val num: Int = 100 //100 limite de busqueda de numeros primos pero no son los primeros 100 numeros primos
+    var count: Int = 0 // modulo del 1 y 2  = 0  es primo y se guarda en el areglo
+    var indice: Int = 1 // el indice de los elementos del areglo
+
+    //Calcula los numeros primos
+    
+    //Calcula los numeros primos
+    //println("1")
+    for (i <- 1 to num) { //1,2,3,
+      //println("Val i: "+i) //este prin es para ver el recorrido del for, se puede quitar
+      count = 0 //0,0,1,2,0,
+     // println("count: "+count)  //print para ver recorrido de for,se puede quitar
+      for (j <- 1 to i) { //1,2,
+        //println("val j: "+j)     //print para ver recorrido de for,se puede quitar
+        if (i % j == 0) { //numeros primos : divisibles entre si mismos y 1
+          count += 1
+         // println("count: " +count)   //print para ver recorrido de for,se puede quitar
+          arreglo(0) = 1
+        }
+      }
+      //si es un primo llena el arreglo
+      if (count == 2) { // si cumple la condicion de nprimo el cont sera =  2 y por eso se guarda en el areglo
+        //println(i)
+        arreglo(indice) = i //el valor del arreglo en el lugar de indice sera = i  , se llena el arreglo con los nprimos
+        indice += 1
+      }
+    }
+/*
+    //Imprime el areglo
+    println("---------------")
+    for (a <- 0 to indice) {
+      if (arreglo(a) != 0) { //para que no imprima el ultimo valor del areglo que es 0
+        println("-------------")
+        println(a + " - " + arreglo(a))
+      }
+    }
+ */
+
+    println("Valor de numerador: ")
+    val numer = scanner.nextInt()
+    println("Valor Denominador: ")
+    val denomi = scanner.nextInt()
 
 
+    var x : Int = 1
+    var y : Int = 0
+    var g : Int =1
+    var operacion1,operacion2 : Int = 0
+//asigne nuevas variables para poder cambiar unas y mantener el valor original de user.
+    var numerador = numer
+    var denominador = denomi
+    while(x < indice) {
+      //println("valor de x: "+x)
+      while (y < x) {
+        if(numerador % arreglo(x) ==0 && denominador % arreglo(x) == 0){  // 10 % 2 ==0
+          println("Numero primo: "+arreglo(x))
+          println("Numerador: " +numerador)
+          println("Denominador: "+ denominador)
+          operacion1 = numerador / arreglo(x)
+          operacion2 = denominador / arreglo(x)
+          println("operacion1: "+operacion1)
+          println("Operacion2: "+operacion2)
+          println("----------")
+          numerador = operacion1
+          denominador = operacion2
+        }
+        y += 1
+      }
+      x += 1
+    }
+    println("La reduccion de: "+numer+"/"+denomi+" es "+numerador+"/"+denominador)
+   
+  }
 
 
 
