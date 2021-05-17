@@ -29,7 +29,7 @@
 
 
                                                  // ############################## eje 21 ################
-      //area de un triangulo
+                                                                    //area de un triangulo
     println("Calulando el area de un triangulo:")
     println("Valor de la altura 'h':")
     var h = scanner.nextDouble()
@@ -44,7 +44,7 @@
 
                                                 // ############################## eje 31 ################
 
-//convertir klpascales-varios
+                                                                //convertir klpascales-varios
     println("Valor en klPascales: ")
     var klp = scanner.nextDouble()
 
@@ -63,7 +63,7 @@
                                                 // ############################## eje 41 ################
 
 
-//notas a frecuencia
+                                                                        //notas a frecuencia
     println("Ingresa 1 nota 'C-D-E-F-G-A-B': ")
     var a = scala.io.StdIn.readChar() //lee en formato scala
 
@@ -122,9 +122,9 @@
 
 
                                           // ############################## eje 51 ################}
+                                                                //Calificacion abcde
 
 
-  //Calificacion abcde
 println("Ingresa la letra de calificacion: ")
     val letra = scala.io.StdIn.readLine() // con el readLine se puede selecionar  "n" cracter
 
@@ -175,7 +175,8 @@ println("Ingresa la letra de calificacion: ")
 
 
                                           // ############################## eje 61 ############################
-
+                                    //saca promedio de N numeros ingresador por el user, se usa como fin cuando el user pone un 0 
+                                    // y comienza el proceso aritmetico.
 
 
 val arreglo = Array.ofDim[Int](80) //declara el areglo
@@ -214,6 +215,7 @@ val arreglo = Array.ofDim[Int](80) //declara el areglo
 
 
                                                  // ############################## eje 71 ############################
+                                                    //raiz cuadrada por metodo de newton (aproximacion con 10 a la-12)
 
 println("Raiz cuadrada por metodo de 'Newton', valor : ")
     var radicando = scanner.nextDouble()
@@ -254,8 +256,8 @@ println("Raiz cuadrada por metodo de 'Newton', valor : ")
 
         
                                              // ############################## eje 81 ############################
+                                                                      //Teoream de pitagoras
 
-//Teoream de pitagoras
 println("Calculando Hiponusa de triangulo rectangulo con 'teorema de pitagoras'")
     println("Medida del primer lado 'a': ")
     val a = scanner.nextDouble()
@@ -267,7 +269,9 @@ println("Calculando Hiponusa de triangulo rectangulo con 'teorema de pitagoras'"
     println("Hipotenusa es c^2 = : "+h+" y obteniendo la raiz es  c = : "+ "%.4f".format(math.sqrt(h)))
 
 
+
                                                // ############################## eje 91 ############################
+                                                //el user ingresa formula con operadores, identifica y muesta que relevancia tiene cada operador
 println("Formula: ")
     val formu = scanner.nextLine()
 
