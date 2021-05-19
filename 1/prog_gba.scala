@@ -63,62 +63,6 @@
                                                 // ############################## eje 41 ################
 
 
-                                                                        //notas a frecuencia
-    println("Ingresa 1 nota 'C-D-E-F-G-A-B': ")
-    var a = scala.io.StdIn.readChar() //lee en formato scala
-
-    println("Ingrese el numero de octava: ")
-    var octava = scanner.nextInt()
-
-
-    val C4 =261.63
-    val D4 =293.66
-    val E4 =329.63
-    val F4 =349.23
-    val G4 =392.00
-    val A4 =440.00
-    val B4 =493.88
-
-    var frec :Double = 0.0
-   var nota = a.toUpper //convertir a mayusculas
-
-    if (nota == 'C'){
-      frec = C4
-    } else if (nota == 'D'){
-      frec = D4
-    }else if (nota == 'E'){
-      frec = E4
-    }else if (nota == 'F'){
-      frec = F4
-    }else if (nota == 'G'){
-      frec = G4
-    }else if (nota == 'A'){
-      frec = A4
-    }else if (nota == 'B'){
-      frec = B4
-    }
-
-    //proceso aritmetico
-
-    var resta = octava-4 //
-    //multiplicamos por que esta arriba del 4 
-    if (octava > 4 ){
-      for (i <- 1 to resta){
-        frec =frec * 2
-      }
-      println("la frecuencia es : "+ frec+" Hz")
-    } else{    //Dividimos por que esta abajo del 4
-      resta = (octava -4)* (-1) //lo multiplico por -1 para hacer positivo el numero de la resta
-      for (i <- 1 to resta ){
-        frec = frec / 2
-      }
-      println("la frecuencia es: "+ frec+" Hz")
-     }
-    }
-
-
-
-
 
 
                                           // ############################## eje 51 ################}
