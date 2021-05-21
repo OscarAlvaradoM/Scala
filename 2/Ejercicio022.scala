@@ -1,5 +1,5 @@
 // Ejercicio 22
-object Ejercicio22 {
+object Ejercicio022 {
   def main (args: Array[String]): Unit = {
     // Mostramos el mensaje para que el usuario sepa qué hacer.
     print("Ingrese los tres lados (separados por espacios) de un tríangulo del que quiera saber su área: ")
