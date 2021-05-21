@@ -1,5 +1,5 @@
 // Ejercicio 32
-object Ejercicio32 {
+object Ejercicio032 {
     def main(args: Array[String]): Unit = {
       print("Ingrese tres números enteros separados por espacios: ")
       // Leemos de esta manera ya que con el formato de readf no jalaba con los enteros.
