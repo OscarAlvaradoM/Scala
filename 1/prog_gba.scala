@@ -386,6 +386,232 @@ println("Formula: ")
     println("La reduccion de: "+numer+"/"+denomi+" es "+numerador+"/"+denominador)
    
   }
+                                        // ############################## eje 111 ############################
+
+//eliminar caracteres
+ println("Escribe las palabras con caracteres y los eliminara el programa: ")
+    val textoentra = scanner.nextLine()
+
+    println(textoentra)
+
+    val txtlimpio = textoentra.replaceAll("[,!&/(#)='%¡¿$|{};¨´:._+*-]", "")
+
+    println(txtlimpio)
+                                        // ############################## eje 121 ############################
+
+                                                                    //quicksort
+import java.lang.Math
+import scala.math._
+import java.util.{Objects, Random, Scanner, StringTokenizer}
+import scala.Array.ofDim
+import java.util.StringTokenizer
+import scala.collection.mutable.ArrayBuffer
+import java.util.Arrays
+import java.lang.Integer.{MAX_VALUE, MIN_VALUE, compare, parseInt, reverseBytes, sum}
+import java.{lang, util}
+import java.util.Arrays.sort
+import scala.util.matching.Regex.Match //para comparar objetos eje91
+
+object ordena {
+
+  def main(args: Array[String]): Unit = {
+    import programas.scanner
+
+
+    println("limite de elementos: ")
+    val limitElementos = scanner.nextInt()
+
+    val arreglo = Array.ofDim[Int](limitElementos) //declara el areglo
+    //val arreglo: Array[Int] = Array(1,2,3,5,3,4,63,624,4,4,643,7)
+
+
+    var valor: Int = 0
+    var cont: Int = 0
+
+   // println("areglo.leng "+ arreglo.length)
+    //lenado de areglo con valores
+    var i = 0
+
+    while (i < arreglo.length){
+      println("ingresa valor "+(i+1)+":")
+      valor = scanner.nextInt()
+      arreglo(i) = valor
+      cont += 1
+      i += 1
+    }
+
+    println("Arreglo inicial: ")
+   // imprime(arreglo)
+
+   println("Areglo ordenado")
+   quick(arregloq = arreglo,0,arreglo.length-1) // del indice 0 al indice final -1
+
+  }
+
+
+  //metodo ordenamiento quicksort:
+  def quick(arregloq: Array[Int],primero:Int,ultimo:Int): Unit ={
+
+    var i = primero
+    var j = ultimo
+    var aux = 0
+    val pivote = arregloq((primero+ultimo)/2)
+
+    do{
+      while (arregloq(i) < pivote){
+        i +=1
+      }
+      while (arregloq(j)> pivote){
+        j -= 1
+      }
+      //intercambio de valores en el arreglo
+      if (i<= j){
+        aux =arregloq(i)
+        arregloq(i)= arregloq(j)
+        arregloq(j)= aux
+        i += 1
+        j -= 1
+      }
+
+    }while(i<=j)
+
+    //hace la creacion de las dos listas
+    if(primero < j){
+      quick(arregloq,primero,j)
+    }
+    if(i< ultimo){
+      quick(arregloq,i,ultimo)
+    }
+
+    imprime(arregloq)
+
+    }
+
+
+  def imprime(arregloi: Array[Int]): Unit = {
+
+    var i =1
+    do {
+          print(arregloi(i)+" ")
+      i +=1
+    }while (i< arregloi.length)
+    println(" ")
+  }
+}
+                                        // ############################## eje 141 ############################
+                                        //++++ //Muestra el encabezado de un texto ()primeras 10 lineas
+
+   //leemos el texto
+    val path: String = "C:\\Users\\CONSULTOR\\Desktop\\gba.csv"
+
+    //convertimos el texto en una reglo
+    val read = Source.fromFile(path).getLines.toArray
+
+    //leemos las primeras 10 lineas del texto para ver si hay titulo
+    println("Primeras 10 lineas")
+
+  for (i <- 0 to 10) {
+    println(read(i))
+    }
+  }
+
+
+
+                                        // ############################## eje 151 ############################
+                                        //++++ //creacion de password con palabras random
+
+import scala.io.Source
+import scala.util.Random
+import java.util.Random
+
+//creacion de password con palabras random
+object eje151 {
+
+  def main(args: Array[String]): Unit = {
+
+  println("Generador de contraseñas con palabras: ")
+  println("Numero de palabras en el pass: ")
+  var lword = scala.io.StdIn.readInt()
+
+    val nwps : String = "C:\\Users\\CONSULTOR\\Desktop\\pass.csv"
+    val read = Source.fromFile(nwps).getLines.toArray
+
+  //llamamos la funcion proceso
+    proceso(pass = read,lword1 = lword)
+  }
+
+  //funcion proceso
+def proceso(pass :Array[String],lword1 : Int): Unit ={
+
+  //variavel txt contiene el texto del archivo
+  val txt = pass
+  val txt_len = txt.length.toInt
+
+  var limite : Int = lword1 //El limite de palabras
+
+
+    println("Pass Aleatorio de palabras")
+
+  val arreglo = Array.ofDim[String](200)
+
+ if (limite > txt_len) {
+    limite = txt_len
+ }
+
+ 
+  //SE llena el areglo con la nueva pass con el txt con palabras
+
+   for (i <- 0 to limite){
+    val rdm = (Math.round(Math.random()*txt_len)+1).toInt //random para
+    arreglo(i)= txt(rdm)
+  }
+
+
+  //imprime areglo con nueva pass
+    for(i <- 1 to limite){
+      print(arreglo(i))
+    }
+  }
+
+
+
+}
+
+                            // ############################## eje 164 ############################
+                              //++++ pide cualquier elemento a user y al poner el gatillo se detiene e imprime lo que puso
+
+ def main(args: Array[String]): Unit = {
+    val arreglo = Array.ofDim[String](80) //declara el areglo con los espacios
+
+
+    var valor: String = "" //para entrar al while
+    var indice: Int = 0 //ligar de los elementos en el areglo, y tambien nos da el numero de elemnteos del areglo
+
+    println("Cual sera el elemento break: ")
+    val lmt = scala.io.StdIn.readLine() //deitien ingreso de datos
+
+    while (valor != lmt) {
+      println("Dame el elemento" + indice + ": ")
+      valor = scala.io.StdIn.readLine()
+      arreglo(indice) = valor
+      indice += 1
+    }
+    //llama a imprime
+    println("\nEstos son los "+(indice-1)+" elementos que ingresaste: ")
+    imprime(arreglo = arreglo,indice= indice)
+    println("\nCon el break: "+ lmt)
+  }
+
+
+  def imprime(arreglo:Array[String],indice : Int): Unit ={
+
+    //imprime el arreglo con el for
+    var lmt2 = indice - 2 // restamos dos por lo que se agrego en el while un 0 y otro por que comenzo en 0
+    for (j <- 0 to (lmt2)) {
+      print(" " + arreglo(j) + ",")
+    }
+
+  }
 
 
 
