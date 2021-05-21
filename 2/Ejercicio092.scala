@@ -5,7 +5,7 @@ True if it is, and False otherwise. Write a main program that reads an integer
 from the user and displays a message indicating whether or not it is prime. Ensure
 that the main program will not run if the file containing your solution is imported
 into another program.*/
-object Ejercicio92 {
+object Ejercicio092 {
   // Definimos la función que nos arrojará un booleano
   def is_prime(number: Int) : Boolean = {
     // Obtenemos la raiz cuadrada del número ingresado, ya que probaremos con todos los enteros hasta este número.
