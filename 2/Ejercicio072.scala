@@ -4,7 +4,7 @@ A string is a palindrome if it is identical forward and backward. For example �
 that reads a string from the user and uses a loop to determines whether or not it is a
 palindrome. Display the result, including a meaningful output message.*/
 import scala.util.control.Breaks._
-object Ejercicio72 {
+object Ejercicio072 {
   def main(args: Array[String]): Unit = {
     // Iniciamos la lectura de la palabra
     val word : String = scala.io.StdIn.readLine("Escriba una palabra y le diré si es un palíndromo o no: ").toLowerCase()
