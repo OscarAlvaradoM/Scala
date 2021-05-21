@@ -6,7 +6,7 @@ the previous question then report the name of the note. Otherwise report that th
 frequency does not correspond to a known note. In this exercise you only need to
 consider the notes listed in the table. There is no need to consider notes from other
 octaves.*/
-object Ejercicio42 {
+object Ejercicio042 {
   def main(args: Array[String]): Unit = {
     print("Introduzca la frecuencia: ")
     // Recibimos la nota como Double ya que incluye a los enteros en caso de A4 y G4
