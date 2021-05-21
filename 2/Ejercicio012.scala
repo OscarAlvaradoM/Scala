@@ -1,7 +1,7 @@
 // Ejercicio 12
 // Importamos lo necesario de la paquetería math para no andar poniendo scala.math en cada invocación
 import scala.math._
-object Ejercicio12 {
+object Ejercicio012 {
   // Función main, otra vez con Unit como salida ya que a lo mucho imprimiremos cosas.
   def main(args: Array[String]): Unit = {
     // Insertamos el aviso para que el usuario inserte lo que necesitamos
