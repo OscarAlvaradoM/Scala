@@ -15,15 +15,15 @@ object Ejercicio152 {
   // Definimos la función para procesar el texto por líneas
   def process(input: String): Array[String] = {
     // Leemos el archivo y lo convertimos en un arreglo
-    val path : String = "/home/oscar/Dropbox/Infomedia/Trabajos/python-scala/quimica.csv"
+    val path: String = "/home/oscar/Dropbox/Infomedia/Trabajos/python-scala/quimica.csv"
     val lines = Source.fromFile(path).getLines.toArray
     // Definimos una posición inicial, con esta buscaremos ya sea en nombre, símbolo o número de protones
-    var position : Int = -1
+    var position: Int = -1
     // Checamos si es un número, en ese caso buscaremos en la posición 2, separado por comas, de cada línea
     if (input forall Character.isDigit) position = 2
     // Si no es un número, vemos el largo de la cadena para ver si es símbolo o nombre
     else {
-      if (input.length > 2)  position = 0
+      if (input.length > 2) position = 0
       else position = 1
     }
     // Inicializamos un arreglo vacío, el cuál será o no sustituido por el resultado
@@ -45,14 +45,19 @@ object Ejercicio152 {
     // Devolvemos el valor obtenido, ya sea un arreglo vací o el arreglo con la info de un elemento si se encontró.
     result
   }
-  def main(args: Array[String]) : Unit = {
-    // Leémos la entrada del usuario
-    val input: String = scala.io.StdIn.readLine("Ingrese el número de protones, el nombre o el símbolo de un elemento químico: ")
-    // Invocamos nuestra función
-    val list: Array[String] = process(input)
-    // Vemos si es un arreglo vacío para el caso de que no coincida con ningún elemento
-    if (list.length == 0) println("Las características que ingresaste no coinciden con ningún elemento cnocido.")
-    // Si no es vacío, arrojamos características bien formateadas.
-    else println(s"Nombre: ${list(0)}\nSímbolo: ${list(1)}\nNúmero de protones: ${list(2)}")
+
+  def main(args: Array[String]): Unit = {
+    var input: String = "-"
+    // Definimos un ciclo while para que se repita hasta que se ingrese una línea vacía.
+    while (input != "") {
+      // Leémos la entrada del usuario
+      input = scala.io.StdIn.readLine("Ingrese el número de protones, el nombre o el símbolo de un elemento químico: ")
+      // Invocamos nuestra función
+      val list: Array[String] = process(input)
+      // Vemos si es un arreglo vacío para el caso de que no coincida con ningún elemento
+      if (list.length == 0) println("Las características que ingresaste no coinciden con ningún elemento conocido.")
+      // Si no es vacío, arrojamos características bien formateadas.
+      else println(s"Nombre: ${list(0)}\nSímbolo: ${list(1)}\nNúmero de protones: ${list(2)}")
+    }
   }
 }
