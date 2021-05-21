@@ -7,7 +7,7 @@ uses a loop to generate this table, showing the original price, the discount amo
 and the new price for purchases of $4.95, $9.95, $14.95, $19.95 and $24.95. Ensure
 that the discount amounts and the new prices are rounded to 2 decimal places when
 they are displayed.*/
-object Ejercicio62 {
+object Ejercicio062 {
   def main(args: Array[String]): Unit = {
     // Definimos la lista de los precios a mostrar
     val precios : List[Double] = List(4.95, 9.95, 14.95, 19.95, 24.95)
