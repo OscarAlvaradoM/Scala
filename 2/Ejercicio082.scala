@@ -3,7 +3,7 @@ In a particular jurisdiction, taxi fares consist of a base fare of $4.00, plus $
 for every 140 meters traveled. Write a function that takes the distance traveled (in
 kilometers) as its only parameter and returns the total fare as its only result. Write a
 main program that demonstrates the function.*/
-object Ejercicio82 {
+object Ejercicio082 {
   // Definición de la función que recibe únicamente los kilómetros recorridos y devuelve la tarifa
   def fare(km: Double) : Double = {
     // Se reciben kilómetros, se convierte a metros
