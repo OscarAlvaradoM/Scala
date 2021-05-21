@@ -16,7 +16,9 @@ object Ejercicio152 {
   def process(input: String): Array[String] = {
     // Leemos el archivo y lo convertimos en un arreglo
     val path: String = "/home/oscar/Dropbox/Infomedia/Trabajos/python-scala/quimica.csv"
-    val lines = Source.fromFile(path).getLines.toArray
+    val lines_tmp = Source.fromFile(path)
+    val lines : Array[String] = lines_tmp.getLines.toArray
+    lines_tmp.close()
     // Definimos una posición inicial, con esta buscaremos ya sea en nombre, símbolo o número de protones
     var position: Int = -1
     // Checamos si es un número, en ese caso buscaremos en la posición 2, separado por comas, de cada línea
